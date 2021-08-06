@@ -1,11 +1,11 @@
 import {requests} from '../util/requests';
 import { useRouter } from 'next/router';
 
-const navList = Object.entries(requests);
 
 
 function Nav() {
     const router = useRouter();
+    const navList = Object.entries(requests);
 
 
     return (
