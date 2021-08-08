@@ -1,12 +1,17 @@
 import Image from 'next/image';
 import HeaderItem from './HeaderItem';
 import { HomeIcon, BadgeCheckIcon, CollectionIcon, LightningBoltIcon, SearchIcon, UserIcon } from '@heroicons/react/outline'
+import Link from 'next/link';
 
 function Header() {
     return (
         <header className="flex flex-col sm:flex-row justify-between items-center m-5 h-auto">
             <div className="flex flex-grow justify-evenly max-w-2xl">
-                <HeaderItem title="HOME" Icon={HomeIcon}/>
+                <Link href="/">
+                    <a>
+                        <HeaderItem title="HOME" Icon={HomeIcon}/>
+                    </a>
+                </Link>
                 <HeaderItem title="TRENDING" Icon={LightningBoltIcon}/>
                 <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon}/>
                 <HeaderItem title="COLLECTIONS" Icon={CollectionIcon}/>
