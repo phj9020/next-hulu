@@ -24,7 +24,7 @@ export const getStaticPaths = async() => {
     }));
 
     const mergeArrayPath = paths.flat(1);
-    console.log(mergeArrayPath)
+
 
     return {
         paths: mergeArrayPath,
@@ -48,7 +48,7 @@ export const getStaticProps  = async(context) => {
 
 function Detail({data}) {
     const BASE_URL = "https://image.tmdb.org/t/p/original/";
-    console.log(data)
+
     return (
         <div className="relative h-screen p-10">
             <Image 
