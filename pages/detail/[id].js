@@ -65,11 +65,14 @@ function Detail({data}) {
                     height={900}
                     />
                 <div className="mx-8 text-white mt-10 z-30 sm:mt-0">
-                    <h1 className="font-bold text-3xl mb-8">Title: {data.title}</h1>
-                    <h2 className="mb-3">Overview</h2>
+                    <h1 className="font-bold text-3xl mb-8">{data.title}</h1>
                     <p className="text-base mb-3">{data.overview}</p>
-                    <p className="mb-3">Status: {data.status}</p>
-                    <span>Rate: {data.vote_average}</span>
+                    <p className="text-base mb-3">{data.genres.map(genre => <span key={genre.id}> • {genre.name}</span>)}</p>
+                    <p className="mb-3">{data.status} on {data.release_date}</p>
+                    <span className="block mb-3">Rate {data.vote_average}</span>
+                    {data.homepage && 
+                        <p className="mb-3 underline"><a href={data.homepage}>{data.homepage}</a></p>
+                    }
                 </div>
 
             </div>
