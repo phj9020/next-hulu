@@ -58,12 +58,15 @@ function Detail({data}) {
                 alt="Post" 
                 />
             <div className="flex flex-col justify-center items-center h-full sm:flex-row">
-                <Image 
-                    src={BASE_URL+data.poster_path} 
-                    alt="Post" 
-                    width={700} 
-                    height={900}
-                    />
+                <div className="mx-auto">
+                    <Image 
+                        src={BASE_URL+data.poster_path} 
+                        alt="Post" 
+                        width={700} 
+                        height={900}
+                        />
+
+                </div>
                 <div className="mx-8 text-white mt-10 z-30 sm:mt-0">
                     <h1 className="font-bold text-3xl mb-8">{data.title}</h1>
                     <p className="text-base mb-3">{data.overview}</p>
